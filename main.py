@@ -8,7 +8,7 @@ m = 0.155
 r = 0.035 
 ball = sphere(pos = vector(0,500,0), radius = r, color = vector(0.49,0.49,1), make_trail = True) # ball is being dropped from 500m in the air
 rho = 1.3 # density of air
-area = math.pi*r**2 # cross-sectional area of ball
+area = math.pi * r**2 # cross-sectional area of ball
 C = 0.35 # drag coefficent
 
 p = m * vector(0,9.81,0)
