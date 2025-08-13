@@ -18,12 +18,17 @@ delta_t = 0.01
 
 vertical_velocity = gcurve(color = vector(0.49, 0.49, 1))
 
-while ball.pos.y > 0.035:
+running = True
+
+while running:
+   
     rate(100)
-    Fdrag = -0.5 * C * rho * area * (mag(p) / m)**2 * hat(p)  # using equation Fdrag = 1/2(C * rho * A * v**2)
-    p = p + (gravity + Fdrag) * delta_t
-    ball.pos = ball.pos + p/m * delta_t 
 
-    vertical_velocity.plot(pos = (t, p.y / m))
+    if ball.pos.y > 0.035:
 
-    t = t + delta_t
+        Fdrag = -0.5 * C * rho * area * (mag(p) / m)**2 * hat(p)  # using equation Fdrag = 1/2(C * rho * A * v**2)
+        p = p + (gravity + Fdrag) * delta_t
+        ball.pos = ball.pos + p/m * delta_t
+        vertical_velocity.plot(pos = (t, p.y / m))
+        t = t + delta_t
+
