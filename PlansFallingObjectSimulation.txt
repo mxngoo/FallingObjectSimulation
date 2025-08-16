@@ -1,0 +1,16 @@
+TO DO:
+- sliders for all constants: create initial loading system, scene is paused on loading the software, user interacts with sliders and changes constants, user presses play button, scene plays (ball falls)
+- Calculates theoretical terminal velocity and compares to simulated terminal velocity at end
+- more graphs: a/t, Fdrag/t, 
+
+SLIDERS:
+no point making the sliders update the values mid-fall: 
+	- scene must be paused and must only play after user changes values with sliders. 
+This allows:
+	- actual scientific tests
+	- comparison between initial analytically-calculated theoretical terminal velocity value compared to final numerically-calculated terminal velocity value at end of simulation.
+HAVE PRESETS FOR REAL LIFE VALUES E.G.:
+	- radius and mass: tennis ball, bowling ball etc
+	- density of fluid: air, water, honey (the equation used to calculate drag is for low-viscosity fluids so keep this in mind)
+	- acceleration due to gravity: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune... Sun?
+
