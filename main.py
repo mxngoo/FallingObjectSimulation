@@ -16,6 +16,7 @@ gravity = m * vector(0, -9.81, 0)
 t = 0
 delta_t = 0.01
 
+g1 = graph(title = "Instantaneous Vertical Velocity", xtitle = "Time (s)", ytitle = "Vertical Velocity (m/s)")
 vertical_velocity = gcurve(color = vector(0.49, 0.49, 1))
 
 running = True
