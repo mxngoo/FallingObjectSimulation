@@ -14,3 +14,7 @@ HAVE PRESETS FOR REAL LIFE VALUES E.G.:
 	- density of fluid: air, water, honey (the equation used to calculate drag is for low-viscosity fluids so keep this in mind)
 	- acceleration due to gravity: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune... Sun?
 
+CAMERA:
+different preset cameras:
+	- Whole scene
+	- Follow ball
