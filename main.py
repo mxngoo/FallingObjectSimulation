@@ -20,50 +20,60 @@ def set_radius(rad):
     global r
     r = rad.value
     ball.radius = r
+    radius_caption.text = f"Radius = {r:.3f} m"
 
 def set_height(height):
     global h
     h.y = height.value
     ball.pos = h
+    height_caption.text = f"Height = {h.y:.2f} m"
     
 def set_mass(mass):
     global m
     m = mass.value
+    mass_caption.text = f"Mass = {m:.3f}"
 
 def set_rho(density):
     global rho
     rho = density.value
+    rho_caption.text = f"Density of Fluid = {rho:.2f} kg/m^3"
 
 def set_drag(drag):
     global C
     C = drag.value
+    drag_caption.text = f"Drag Coefficient = {C:.2f}"
     
 
 # Sliders with Labels:
 
 scene.append_to_caption("Radius of Ball (m): ")
 scene.append_to_caption("\n\n")
-radius_slider = slider(bind = set_radius, max = 0.1, min = 0.05, step = 0.01)
+radius_slider = slider(bind = set_radius, max = 0.1, min = 0.035, step = 0.005, value = 0.035)
+radius_caption = wtext(text = f"Radius = {r:.3f} m")
 scene.append_to_caption("\n\n")
 
 scene.append_to_caption("Initial Height (m): ")
 scene.append_to_caption("\n\n")
-height_slider = slider(bind = set_height, max = 500, min = 100, step = 1)
+height_slider = slider(bind = set_height, max = 500, min = 100, step = 1, value = 500)
+height_caption = wtext(text = f"Height = {h.y:.2f} m")
 scene.append_to_caption("\n\n")
 
 scene.append_to_caption("Mass of Ball (kg): ")
 scene.append_to_caption("\n\n")
-mass_slider = slider(bind = set_mass, max = 1, min = 0.01, step = 0.01)
+mass_slider = slider(bind = set_mass, max = 1, min = 0.01, step = 0.005, value = 0.155)
+mass_caption = wtext(text = f"Mass = {m:.3f} kg")
 scene.append_to_caption("\n\n")
 
 scene.append_to_caption("Density of Fluid (kg/m^3)")
 scene.append_to_caption("\n\n")
-rho_slider = slider(bind = set_rho, max = 3, min = 0.1, step =  0.1)
+rho_slider = slider(bind = set_rho, max = 3, min = 0.1, step =  0.1, value = 1.3)
+rho_caption = wtext(text = f"Density of Fluid = {rho:.2f} kg/m^3")
 scene.append_to_caption("\n\n")
 
 scene.append_to_caption("Drag Coefficient")
 scene.append_to_caption("\n\n")
-drag_slider = slider(bind = set_drag, max = 0.45, min = 0.35, step = 0.01)
+drag_slider = slider(bind = set_drag, max = 0.45, min = 0.35, step = 0.01, value = 0.35)
+drag_caption = wtext(text = f"Drag Coefficient = {C:.2f}")
 scene.append_to_caption("\n\n")
 
 
