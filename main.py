@@ -6,7 +6,9 @@ scene.append_to_caption("\n\n")
 
 ring(pos = vec(0, 0, 0), axis = vec(0, 1, 0), radius = math.pi + 5, thickness = 5, color = vector(1, 0.65, 1))
 
+
 # Ball and Constants:
+
 m = 0.155 # mass of ball
 r = 0.035 # radius of ball
 h = vector(0, 500, 0) # initial height of ball
@@ -15,7 +17,9 @@ rho = 1.3 # density of air
 area = math.pi * r**2 # cross-sectional area of ball
 C = 0.35 # drag coefficent
 
+
 # Slider Functions:
+
 def set_radius(rad):
     global r
     r = rad.value
@@ -77,10 +81,13 @@ drag_caption = wtext(text = f"Drag Coefficient = {C:.2f}")
 scene.append_to_caption("\n\n")
 
 
-# Start Screen
+# Start Screen:
+
 start_screen = scene.waitfor('click')  
 ball.make_trail = True
 
+
+# Initiliasation:
 
 v = vector(0, 0, 0)
 a = vector(0, 0, 0)
@@ -88,12 +95,16 @@ Fgravity = m * vector(0, -9.81, 0)
 t = 0
 delta_t = 0.01
 
+
+# Graphs:
+
 g1 = graph(title = "Instantaneous Vertical Velocity", xtitle = "Time (s)", ytitle = "Vertical Velocity (m/s)", align = "left")
 vertical_velocity = gcurve(color = vector(0.49, 0.49, 1))
 g2 = graph(title = "Instantaneous Acceleration", xtitle = "Time (s)", ytitle = "Acceleration (m/s^2)", align = "left")
 acceleration = gcurve(color = color.green)
 g3 = graph (title = "Instantaneous Force of Air Resistance", xtitle = "Time (s)", ytitle = "Drag Force (N)", align = "left")
 drag_force = gcurve(color = color.red)
+
 
 running = True
 
