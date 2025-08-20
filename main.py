@@ -8,7 +8,6 @@ ring(pos = vec(0, 0, 0), axis = vec(0, 1, 0), radius = math.pi + 5, thickness = 
 
 
 # Ball and Constants:
-
 m = 0.155 # mass of ball
 r = 0.035 # radius of ball
 h = vector(0, 500, 0) # initial height of ball
@@ -85,6 +84,7 @@ scene.append_to_caption("\n\n")
 
 start_screen = scene.waitfor('click')  
 ball.make_trail = True
+
 
 
 # Initialisation:
