@@ -87,7 +87,7 @@ start_screen = scene.waitfor('click')
 ball.make_trail = True
 
 
-# Initiliasation:
+# Initialisation:
 
 v = vector(0, 0, 0)
 a = vector(0, 0, 0)
