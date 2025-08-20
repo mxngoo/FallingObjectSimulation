@@ -88,10 +88,12 @@ Fgravity = m * vector(0, -9.81, 0)
 t = 0
 delta_t = 0.01
 
-g1 = graph(title = "Instantaneous Vertical Velocity", xtitle = "Time (s)", ytitle = "Vertical Velocity (m/s)")
+g1 = graph(title = "Instantaneous Vertical Velocity", xtitle = "Time (s)", ytitle = "Vertical Velocity (m/s)", align = "left")
 vertical_velocity = gcurve(color = vector(0.49, 0.49, 1))
-g2 = graph(title = "Instantaneous Acceleration", xtitle = "Time (s)", ytitle = "Acceleration (m/s^2)")
+g2 = graph(title = "Instantaneous Acceleration", xtitle = "Time (s)", ytitle = "Acceleration (m/s^2)", align = "left")
 acceleration = gcurve(color = color.green)
+g3 = graph (title = "Instantaneous Force of Air Resistance", xtitle = "Time (s)", ytitle = "Drag Force (N)", align = "left")
+drag_force = gcurve(color = color.red)
 
 running = True
 
@@ -108,5 +110,6 @@ while running:
         ball.pos = ball.pos + v * delta_t
         vertical_velocity.plot(pos = (t, v.y))
         acceleration.plot(pos = (t, a.y))
+        drag_force.plot(pos = (t, Fdrag.y))
         t = t + delta_t
 
